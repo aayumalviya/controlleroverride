@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Controlleroverride</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+<center>
+  <body>
+    <%= yield %>
+   <% if user_signed_in? %>
+       <h1 class="notice", style="color: rebeccapurple;"><%= notice %></h1>
+    <% else %>
+       <h1 class="alert", style="color: rebeccapurple;"><%= alert %></h1>
+    <% end %> 
+
+
+  </body>
+  </center>
+</html>

@@ -1,0 +1,9 @@
+<center>
+<h3 style="color: darkgreen;">HOmeIndex</h3>
+<h3 style="color: orange;">Hello Welcome to rails </h3>
+<% if user_signed_in? %>
+	<%= button_to "Signed_out", destroy_user_session_path, method: :delete %>
+<% else %>
+	<button><%= link_to "signIn" , new_user_session_path, method: :get %></button>
+<% end %> 
+</center>
